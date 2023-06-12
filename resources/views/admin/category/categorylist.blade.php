@@ -1,9 +1,9 @@
-@section("title","SIMS")
+@section("title","EnteBill")
 @extends("adminlayouts.theme")
 @section("maincontent")
 
     <div class="pagetitle">
-      <div class="alert alert-primary" style="background-color:aliceblue;color: black;text-transform: uppercase;">
+      <div class="alert alert-primary" style="background-color:transparent;color: black;text-transform: uppercase;">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal" >
                 CREATE CATEGORY
               </button>

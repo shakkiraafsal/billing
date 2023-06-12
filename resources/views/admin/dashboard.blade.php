@@ -1,4 +1,4 @@
- @section("title","SIMS")
+ @section("title","EnteBill")
 @extends("adminlayouts.theme")
   @section("maincontent")
  <div class="pagetitle">

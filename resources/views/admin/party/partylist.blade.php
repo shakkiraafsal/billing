@@ -5,7 +5,7 @@
     <div class="pagetitle">
       <div class="alert alert-primary" style="background-color:aliceblue;color: black;text-transform: uppercase;">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal" >
-                CREATE HSN CODE
+                CREATE PARTY
               </button>
                  @if(session()->has('message'))
               <div class="alert-box" id="hideDiv">{{ session()->get('message') }}</div>
@@ -23,7 +23,7 @@
            
 
             
-   <div class="card-title">HSN CODE LIST</div>
+   <div class="card-title">PARTY LIST</div>
      <div class="table-responsive">
      
 
@@ -32,34 +32,28 @@
                 <thead>
                     <tr>
                         
-                          <th>Sl No.</th>
-                          <th>HSN Code</th>
-                          <th>HSN Description</th>
-                          <th>HSN Unit</th>
-                          <th>Tax Mode</th>
+                        <th>Sl No.</th>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Gst</th>
+                        <th>Mobile</th>
+                        <th>Address</th>
+                        <th>Email</th>
                          
                         
                         </tr>
                 </thead>
               
                  <tbody>
-                   @foreach($hsn as $hsn)
-                           <tr>
-                             
-                              <td>{{$loop->iteration}}</td>  
-                             
-                              <td>{{$hsn->hsncode}}</td>
-                               <td>{{$hsn->hsndescp}}</td>
-                            
-                             <td>{{$hsn->hsnunit}}</td>
-                            
-                             <td>{{$hsn->hsntaxmode}}</td>
-                            
-                            
-                            
-                            
-                           
-                          
+                   @foreach($party as $party)
+                           <tr> 
+                            <td>{{$loop->iteration}}</td>  
+                            <td>{{$party->pname}}</td>
+                            <td>{{$party->pcode}}</td>
+                            <td>{{$party->pgst}}</td>
+                            <td>{{$party->pmobile}}</td>
+                            <td>{{$party->padress}}</td>
+                            <td>{{$party->pemail}}</td>
                           </tr>
                          @endforeach
                             </tbody>
@@ -80,58 +74,82 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                     <h5 class="card-title"> HSN CODE</h5>
+                     <h5 class="card-title">CREATE PARTY</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                <form class="row g-3" method="post" action="{{route('admin.post-hsn')}}" autocomplete="off">
+                <form class="row g-3" method="post" action="{{route('admin.post-party')}}" autocomplete="off">
                        @csrf
 
 
                       
                           <div class="col-12">
-                        <label for="exampleInputName1" class="form-label">HSN Code</label>
-                       <input type="number" name="hsncode" class="form-control" value="{{old('hsncode')}}" required>
-                          @error("hsncode")
+                        <label for="exampleInputName1" class="form-label">Part Name</label>
+                       <input type="text" name="pname" class="form-control" value="{{old('pname')}}" required>
+                          @error("pname")
                             <div class="badge bg-danger">
-                               {{$errors->first("hsncode")}}
+                               {{$errors->first("pname")}}
                                  
                             </div>
                              @enderror
                            </div>
 
                                 <div class="col-12">
-                        <label for="exampleInputName1" class="form-label">HSN Description</label>
-                       <input type="text" name="hsndescp" class="form-control" value="{{old('hsndescp')}}" required>
-                          @error("hsndescp")
+                        <label for="exampleInputName1" class="form-label">Paty Code</label>
+                       <input type="text" name="pcode" class="form-control" value="{{old('pcode')}}">
+                          @error("pcode")
                             <div class="badge bg-danger">
-                               {{$errors->first("hsndescp")}}
+                               {{$errors->first("pcode")}}
                                  
                             </div>
                              @enderror
                            </div>
                  
                         <div class="col-12">
-                        <label for="exampleInputName1" class="form-label">HSN Unit</label>
-                       <input type="text" name="hsnunit" class="form-control" value="{{old('hsnunit')}}" required>
-                          @error("hsnunit")
+                        <label for="exampleInputName1" class="form-label">GST</label>
+                       <input type="text" name="pgst" class="form-control" value="{{old('pgst')}}" required>
+                          @error("pgst")
                             <div class="badge bg-danger">
-                               {{$errors->first("hsnunit")}}
+                               {{$errors->first("pgst")}}
                                  
                             </div>
                              @enderror
                            </div>
                  
                         <div class="col-12">
-                        <label for="exampleInputName1" class="form-label">Tax Mode</label>
-                       <input type="text" name="hsntaxmode" class="form-control" value="{{old('hsntaxmode')}}" required>
-                          @error("hsntaxmode")
+                        <label for="exampleInputName1" class="form-label">Mobile</label>
+                       <input type="number" name="pmobile" class="form-control" value="{{old('pmobile')}}" required>
+                          @error("pmobile")
                             <div class="badge bg-danger">
-                               {{$errors->first("hsntaxmode")}}
+                               {{$errors->first("pmobile")}}
                                  
                             </div>
                              @enderror
                            </div>
+
+                        <div class="col-12">
+                        <label for="exampleInputName1" class="form-label">Address</label>
+                       <input type="text" name="padress" class="form-control" value="{{old('padress')}}">
+                          @error("padress")
+                            <div class="badge bg-danger">
+                               {{$errors->first("padress")}}
+                                 
+                            </div>
+                             @enderror
+                           </div>
+
+                            <div class="col-12">
+                        <label for="exampleInputName1" class="form-label">Email</label>
+                       <input type="email" name="pemail" class="form-control" value="{{old('pemail')}}">
+                          @error("pemail")
+                            <div class="badge bg-danger">
+                               {{$errors->first("pemail")}}
+                                 
+                            </div>
+                             @enderror
+                           </div>
+                 
+                 
                  
 
 

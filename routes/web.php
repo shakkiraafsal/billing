@@ -46,6 +46,18 @@ Route::post('post-hsn',[AdminController::class,'postHsn'])->name('admin.post-hsn
 
 //ITEM//
 
+Route::get('item-list',[AdminController::class,'itemList'])->name('admin.item-list');
+Route::post('post-item',[AdminController::class,'postItem'])->name('admin.post-item');
+
+//ITEM//
+
+
+//PARTY//
+
+Route::get('party-list',[AdminController::class,'partyList'])->name('admin.party-list');
+Route::post('post-paty',[AdminController::class,'postParty'])->name('admin.post-party');
+
+//PARTY//
 
 
 });

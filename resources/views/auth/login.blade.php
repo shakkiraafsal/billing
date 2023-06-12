@@ -1,5 +1,5 @@
 
-@section("title","SGOU|LOGIN")
+@section("title","EnteBill")
 @extends("layouts.app")
 @section("maincontent")
 <section class="section">
@@ -24,12 +24,15 @@
                 </div>
                 <div class="col-12" id="banneraction">
                     <!-- <a href="/" style="color:white;font-size: 20px;"><i class="bi bi-house"></i>Home</a> -->
+                   <h5>Welcom to EnteBill</h5> 
                    
                 </div>
 
          
             <div class="col-md-6" style="padding-top: 30px;background: #fcfcff;" id="loginleft">
                <img src="{{asset('backend/assets//img/loginindex.gif')}}" width="700" height="380">
+
+
             </div>
             <div class="col-md-5" style="border: 1px solid #ced4da; margin-top: 5px;padding-bottom: 10px;background: #fcfcff;">
                     <div class="d-flex justify-content-center py-4">
@@ -140,8 +143,27 @@
             </div>
           </div>
 
-          
+    
+<div class="modal fade" id="basicModal" tabindex="-1"data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                     <h5 class="card-title">EnteBill</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="alert-modal-body">
+                     <h5 class="card-title">Please enter a password to show</h5>
 
+                  </div>
+                     <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     
+                    </div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div><!-- End Basic Modal-->
           
 
         </div>
@@ -174,13 +196,15 @@
     }
 </script>
         <script>
-function showPassword() {
+function showPassword(title, body) {
 
   var y = document.getElementById("password").value;
   
   if(y=="")
   {
-    alert('Please enter a password to show')
+   
+     $('#alert-modal-body').html("Please enter a password to show");
+    $('#basicModal').modal('show');
   }
   else
   {

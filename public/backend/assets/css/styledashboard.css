@@ -554,7 +554,7 @@ h1, h2, h3, h4, h5, h6 {
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #1E2F97
+  background-color: black;
 }
 @media (max-width: 1199px) {
   .sidebar {
@@ -614,16 +614,16 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   font-size: 15px;
   font-weight: 600;
-  color: #4154f1;
+  color: white;
   transition: 0.3;
-  background: #f6f9ff;
+  background:black;
   padding: 10px 15px;
   border-radius: 4px;
 }
 .sidebar-nav .nav-link i {
   font-size: 16px;
   margin-right: 10px;
-  color: #4154f1;
+  color: white;
 }
 .sidebar-nav .nav-link.collapsed {
   color: #012970;

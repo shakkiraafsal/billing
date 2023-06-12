@@ -63,10 +63,11 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
    <div class="d-flex align-items-center justify-content-between">
-      <a href="" class="logo d-flex align-items-center" style="color: white;">
+      <!-- <a href="" class="logo d-flex align-items-center" style="color: white;">
         <img src="{{asset('backend/assets/img/header.png')}}" alt="" id="responsive">
         
-      </a>
+      </a> -->
+      <h3>EnteBill</h3>
      <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
    
@@ -148,8 +149,28 @@
       </li>
  <li class="nav-item">
         <a class="nav-link " href="{{route('admin.hsn-list')}}">
-         <i class="bi bi-list-stars"></i>
+        <i class="bi bi-upc"></i>
           <span>HSN Code</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('admin.category-list')}}">
+         <i class="bi bi-grip-vertical"></i>
+          <span>Unit</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('admin.item-list')}}">
+        <i class="bi bi-cart"></i>
+          <span>Items</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('admin.party-list')}}">
+        <i class="bi bi-people"></i>
+          <span>Party</span>
         </a>
       </li>
 
@@ -214,7 +235,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>CYBER CENTRE-SGOU</span></strong>. All Rights Reserved|   Designed by <a href="https://sgou.ac.in" target="_blank">CYBER CENTRE-SGOU</a>
+      &copy; Copyright <strong><span>Szept Tech</span></strong>. All Rights Reserved|   Designed by <a href="https://szepttech.com" target="_blank">Szept Tech</a>
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->

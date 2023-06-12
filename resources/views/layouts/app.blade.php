@@ -55,8 +55,8 @@
     </div>
   </main><!-- End #main -->
 <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>CYBER CENTRE-SGOU</span></strong>. All Rights Reserved|   Designed by <a href="https://sgou.ac.in" target="_blank">CYBER CENTRE-SGOU</a>
+     <div class="copyright">
+      &copy; Copyright <strong><span>Szept Tech</span></strong>. All Rights Reserved|   Designed by <a href="https://szepttech.com" target="_blank">Szept Tech</a>
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
